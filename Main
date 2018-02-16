@@ -15,7 +15,8 @@ public class Main
 			{
 				System.out.println("Das Jahr " + i + " ist ein Schaltjahr!");
 			}
-
+			else
+			{System.out.println("keines");}
 		}
 	}
 //boolean ueberprueft ob i ohne rest durch 4 teilbar -> true or false
@@ -23,23 +24,22 @@ public class Main
 	//letzte ueberpruefungsrechnung i/100 ohne rest und i%400 mit rest -> boolean returns false
 	public static boolean b(int i)
 	{
-		if (i % 4 == 0)
+		if (i % 4 == 0 || i % 100 == 0 && i % 400 == 0)
 		{
-			if (i % 100 == 0 && i % 400 == 0)
-			{
-				return true;
-			}
-			else
-			{
-				if (i % 100 == 0 && i % 400 != 0)
-				{
-					return false;
 
-				}
-			}
 			return true;
 
 		}
-		return false;
+		else
+		{
+
+			return false;
+
+		}
 	}
+
+
+
+
+
 }
